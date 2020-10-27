@@ -14,7 +14,7 @@ setup(
   description="A testsupport utility module for python",
   long_description=long_description,
   long_description_content_type="text/markdown",
-  url="https://github.com/qwaneu/quiltz",
+  url="https://github.com/qwaneu/quiltz-testsupport",
   packages=find_packages(where='src'),
   package_dir={'':'src'},
   package_data={'': ['**/pems/*.pem']},
