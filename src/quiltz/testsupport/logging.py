@@ -1,5 +1,5 @@
-from testing import *
-from hamcrest import has_item
+import pytest
+from hamcrest import assert_that, has_item
 import logging
 from logging import Handler, INFO
 
