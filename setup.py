@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys
 sys.path.append('src')
-from quiltz.version import version
+from quiltz.testsupport.version import version
 
 with open("README.md", "r") as fh:
   long_description = fh.read()

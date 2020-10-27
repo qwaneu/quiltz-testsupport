@@ -3,7 +3,7 @@ import sys
 import re
 import subprocess
 sys.path.append('src')
-from quiltz.version import version
+from quiltz.testsupport.version import version
 
 new_version = sys.argv[1]
 old_version = version
@@ -15,7 +15,7 @@ if answer != 'yes':
     print('no confirmation')
     exit(0) 
 
-with open('src/quiltz/version.py', "w+") as file:
+with open('src/quiltz/testsupport/version.py', "w+") as file:
     file.write('version="{}"'.format(new_version))
 
 def run(*cmdline):
