@@ -5,7 +5,7 @@
 *.png
 build/
 dist/
-src/quiltz.egg-info/
+src/**/*.egg-info/
 reports/
 venv/**/*
 tests/data/**/*

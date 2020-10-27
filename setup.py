@@ -17,6 +17,8 @@ setup(
   url="https://github.com/qwaneu/quiltz",
   packages=find_packages(where='src'),
   package_dir={'':'src'},
+  package_data={'': ['**/pems/*.pem']},
+  include_package_data=True,
   classifiers=[
       "Programming Language :: Python :: 3",
       "License :: OSI Approved :: MIT License",
