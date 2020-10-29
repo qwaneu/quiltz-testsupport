@@ -6,11 +6,11 @@ A package for test support
 
 At QWAN we're building some applications in python. We collect usefull stuff in quiltz packages:
 
-* **quiltz_domain**
+* **quiltz-domain**
   contains domain level modules like, entity id's, results, an email anonymizer, validators and parsers
-* **quiltz_testsupport**
+* **quiltz-testsupport**
   contains test support modules, that supports mainly non unit tests, like integrating with smtp,  probing asynchronous results and asserting log statements
-* **quilts_messaging**
+* **quiltz-messaging**
   contains a messaging domain concept and an engine(s) to send the messages. Currently only smtp sending is supported.
 
 ## modules in this packag
@@ -74,6 +74,6 @@ def test_collects_message_for_recepient(self, server):
 ## installing 
 
 ```bash
-pip install quiltz_testsupport
+pip install quiltz-testsupport
 ```
 

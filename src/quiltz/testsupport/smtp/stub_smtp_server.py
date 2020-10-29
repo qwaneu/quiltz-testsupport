@@ -35,4 +35,4 @@ class StubSmtpServer:
 
 def pem_path(pem_file):
     return join(dirname(__file__), 'pems', '{}.pem'.format(pem_file))
-    return 'tests/support/{}.pem'.format(pem_file)
+  
