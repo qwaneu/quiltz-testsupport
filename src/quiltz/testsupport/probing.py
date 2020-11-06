@@ -1,4 +1,5 @@
 from time import sleep
+import logging
 
 def probe_that(f, timeout=1000):
     t = 0
