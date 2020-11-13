@@ -1,8 +1,9 @@
 from time import sleep
+from typing import Callable
 from hamcrest import assert_that
 from hamcrest.core.matcher import Matcher
 
-def probe_that(assertion_or_delayed_result_function, matcher=None, timeout=1000):
+def probe_that(assertion_or_delayed_result_function: Callable, matcher:Matcher=None, timeout: int=1000):
     """probes the delayed_result_function until it matches the hamcrest matcher given.
     if it matches the matcher within the timeout the probe passes. It if does not it fails 
     with an AssertionError, just like assert_that would.
