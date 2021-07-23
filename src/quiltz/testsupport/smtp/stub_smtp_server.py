@@ -31,7 +31,7 @@ class StubSmtpServer:
     async def handle_DATA(self, server, session, envelope):
         data = envelope.content.decode('utf8', errors='replace')
         self.messages.append(data)
-        return self.return_values.pop(0) or self.default_return_value
+        return len(self.return_values) and self.return_values.pop(0) or self.default_return_value
 
     def start(self):
         self.controller.start()

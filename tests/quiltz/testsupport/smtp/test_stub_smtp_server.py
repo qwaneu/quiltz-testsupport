@@ -16,7 +16,7 @@ class TestSMTPStubServer:
 
     def test_collects_message_for_recipient(self):        
         message = aMessage(recipient='rob@mailinator.com', sender='no-reply@qwan.eu', subject='test', body='hello test')
-        self.message_engine.send([message])
+        assert_that(self.message_engine.send([message]), equal_to([]))
         
         probe_that(lambda: assert_that(self.server.messages, equal_to([
             stringified_message(message)
