@@ -2,6 +2,7 @@ from testing import *
 from quiltz.testsupport import log_collector
 import logging
 
+
 class TestLogCollector:
     @pytest.fixture(autouse=True)
     def setup(self):
@@ -12,5 +13,5 @@ class TestLogCollector:
         log_collector.assert_info('hello info')
 
     def test_collects_warning_message(self, log_collector):
-        self.logger.warn('hello warning')
+        self.logger.warning('hello warning')
         log_collector.assert_warning('hello warning')
