@@ -3,11 +3,13 @@ from hamcrest import assert_that, has_item
 import logging
 from logging import Handler, INFO
 
+
 @pytest.fixture
 def log_collector():
     collector = LogCollector.create()
     yield collector
     collector.remove()
+
 
 class LogCollector(Handler):
     @staticmethod

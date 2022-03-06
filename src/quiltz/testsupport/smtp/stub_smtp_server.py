@@ -1,8 +1,5 @@
-import asyncio
-from re import I
 import ssl
 from os.path import join, dirname
-from io import StringIO
 from aiosmtpd.controller import Controller
 from aiosmtpd.smtp import SMTP
 
@@ -39,6 +36,6 @@ class StubSmtpServer:
     def stop(self):
         self.controller.stop()
 
+
 def pem_path(pem_file):
     return join(dirname(__file__), 'pems', '{}.pem'.format(pem_file))
-  

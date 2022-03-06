@@ -4,7 +4,7 @@ A package for test support
 
 ## Purpose
 
-At QWAN we're building some applications in python. We collect usefull stuff in quiltz packages:
+At [QWAN](https://www.qwan.eu) we're building some applications in python. We collect usefull stuff in quiltz packages:
 
 * [**quiltz-domain**](https://github.com/qwaneu/quiltz-domain) contains domain
   level modules like, entity id's, results, an email anonymizer, validators and
@@ -16,10 +16,10 @@ At QWAN we're building some applications in python. We collect usefull stuff in 
   messaging domain concept and an engines to send the messages. Currently only
   smtp sending is supported.
 
-## modules in this packag
+## Modules in this package
 
 ### logging
-With the logging module you can assert log statements in a test using the log_collector fixture:
+With the logging module you can assert log statements in a test using the `log_collector` fixture:
 
 #### in test:
 ```python

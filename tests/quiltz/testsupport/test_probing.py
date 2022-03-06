@@ -3,12 +3,14 @@ from quiltz.testsupport import probe_that, log_collector
 from hamcrest import raises, calling
 import time
 
+
 class TestProbeThat_with_assert_that:
     def test_fails_on_assert_that_fails(self):
         assert_that(lambda: probe_that(lambda: assert_that(service_returning_true_eventually(), is_(False))), raises(AssertionError))
 
     def test_passes_on_assert_that_passes(self):
         probe_that(lambda: assert_that(service_returning_true_eventually(), is_(True)))
+
 
 class TestProbeThat_without_assert_that_and_with_a_matcher:
     def test_fails_on_assert_that_fails(self):

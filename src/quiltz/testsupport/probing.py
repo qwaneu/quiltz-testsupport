@@ -3,7 +3,8 @@ from typing import Callable
 from hamcrest import assert_that
 from hamcrest.core.matcher import Matcher
 
-def probe_that(assertion_or_delayed_result_function: Callable, matcher:Matcher=None, timeout: int=1000):
+
+def probe_that(assertion_or_delayed_result_function: Callable, matcher: Matcher = None, timeout: int = 1000):
     """probes the delayed_result_function until it matches the hamcrest matcher given.
     if it matches the matcher within the timeout the probe passes. It if does not it fails 
     with an AssertionError, just like assert_that would.
@@ -23,18 +24,18 @@ def probe_that(assertion_or_delayed_result_function: Callable, matcher:Matcher=N
     :param timeout:   timeout (default one second)
     """
     assertion = assertion_or_delayed_result_function
-    if matcher is not None: 
+    if matcher is not None:
         if not isinstance(matcher, Matcher):
-            raise(ValueError("matcher is not a matcher"))
+            raise (ValueError("matcher is not a matcher"))
         assertion = lambda: assert_that(assertion_or_delayed_result_function(), matcher)
     t = 0
     success = False
-    while(not success):
+    while not success:
         try:
             assertion()
             success = True
         except AssertionError as e:
-            sleep(50.0/1000.0)
+            sleep(50.0 / 1000.0)
             t += 50
-            if (t>=timeout):
+            if t >= timeout:
                 raise e
