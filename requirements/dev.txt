@@ -1,4 +1,4 @@
 # development
-pyhamcrest==2.0.3
-pytest==6.2.5
+pyhamcrest~=2.0.3
+pytest~=6.2
 pytest_watch==4.2.0
