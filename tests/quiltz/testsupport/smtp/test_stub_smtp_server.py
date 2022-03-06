@@ -45,7 +45,7 @@ class TestSMTPStubServer:
         
 
 def stringified_message(message):
-    return '\r\n'.join(message.as_string().splitlines())
+    return '\r\n'.join(message.as_string().splitlines()) + '\r\n'
 
 
 def a_message(recipient, sender, subject, body):

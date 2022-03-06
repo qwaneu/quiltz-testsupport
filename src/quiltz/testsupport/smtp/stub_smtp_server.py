@@ -10,7 +10,7 @@ class TLSController(Controller):
         self.tls_context = tls_context
         
     def factory(self):
-        return SMTP(self.handler, enable_SMTPUTF8=self.enable_SMTPUTF8, tls_context=self.tls_context)
+        return SMTP(self.handler, enable_SMTPUTF8=True, tls_context=self.tls_context)
 
 
 class StubSmtpServer:
